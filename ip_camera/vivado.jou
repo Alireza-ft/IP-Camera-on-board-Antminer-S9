@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sat Jun  6 22:05:50 2026
-# Process ID: 9276
-# Current directory: C:/Users/Arf/Desktop/ip_camera/IP-Camera-on-board-Antminer-S9/ip_camera
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5520 C:\Users\Arf\Desktop\ip_camera\IP-Camera-on-board-Antminer-S9\ip_camera\ip_camera.xpr
-# Log file: C:/Users/Arf/Desktop/ip_camera/IP-Camera-on-board-Antminer-S9/ip_camera/vivado.log
-# Journal file: C:/Users/Arf/Desktop/ip_camera/IP-Camera-on-board-Antminer-S9/ip_camera\vivado.jou
+# Start of session at: Sun Jun  7 22:34:37 2026
+# Process ID: 6016
+# Current directory: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11064 C:\Users\Arf\Desktop\ip_camera\New folder\IP-Camera-on-board-Antminer-S9\ip_camera\ip_camera.xpr
+# Log file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/vivado.log
+# Journal file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera\vivado.jou
 # Running On        :DESKTOP-GTOUM49
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :19045
@@ -17,176 +17,67 @@
 # CPU Physical cores:2
 # CPU Logical cores :4
 # Host memory       :3688 MB
-# Swap memory       :3869 MB
-# Total Virtual     :7558 MB
-# Available Virtual :2327 MB
+# Swap memory       :7485 MB
+# Total Virtual     :11174 MB
+# Available Virtual :7890 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Arf/Desktop/ip_camera/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.xpr
+open_project {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.xpr}
 update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Arf/Desktop/ip_camera/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd}
+import_files -norecurse {{C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ov7670/ov7670_capture/ov7670_capture.vhd} {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ov7670/ov7670_axi_stream_capture/ov7670_axi_stream_capture.vhd} {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ov7670/ov_7670_controller/ov7670_controller.vhd} {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ov7670/ov_7670_controller/i2c_sender.vhd} {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ov7670/ov_7670_controller/ov7670_registers.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference ov7670_axi_stream_capture ov7670_axi_stream_ca_0
+create_bd_cell -type module -reference ov7670_controller ov7670_controller_0
+set_property location {2 469 688} [get_bd_cells ov7670_controller_0]
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0
+make_bd_pins_external  [get_bd_pins ov7670_axi_stream_ca_0/pclk]
 endgroup
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_1
-endgroup
-set_property location {4 1007 41} [get_bd_cells smartconnect_0]
-set_property location {2.5 594 125} [get_bd_cells smartconnect_1]
-delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_intf_nets axi_dma_0_M_AXI_SG] [get_bd_cells axi_mem_intercon]
-delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells ps7_0_axi_periph]
-delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
-delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N]
-delete_bd_objs [get_bd_nets proc_sys_reset_0_peripheral_aresetn]
-set_property location {5.5 1590 359} [get_bd_cells smartconnect_0]
-set_property location {4 1556 153} [get_bd_cells smartconnect_0]
-set_property location {3 1193 169} [get_bd_cells axi_dma_0]
-set_property location {2.5 791 180} [get_bd_cells smartconnect_1]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+make_bd_pins_external  [get_bd_pins ov7670_axi_stream_ca_0/vsync]
 endgroup
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_1
-endgroup
-set_property location {3 801 419} [get_bd_cells proc_sys_reset_1]
-set_property location {3 1274 489} [get_bd_cells xlconcat_0]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins proc_sys_reset_1/ext_reset_in]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {50} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins proc_sys_reset_1/slowest_sync_clk]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_0/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+make_bd_pins_external  [get_bd_pins ov7670_axi_stream_ca_0/href]
 endgroup
 startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_0/M_AXI_SG} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_SG]
+make_bd_pins_external  [get_bd_pins ov7670_axi_stream_ca_0/d]
 endgroup
-regenerate_bd_layout
 startgroup
+make_bd_pins_external  [get_bd_pins ov7670_controller_0/config_finished]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ov7670_controller_0/sioc]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ov7670_controller_0/siod]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ov7670_controller_0/reset]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ov7670_controller_0/pwdn]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ov7670_controller_0/xclk]
+endgroup
+connect_bd_net [get_bd_pins ov7670_controller_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {3 799 491} [get_bd_cells xlconstant_0]
 set_property -dict [list \
-  CONFIG.PCW_EN_CLK1_PORT {1} \
-  CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} \
-  CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {24} \
-  CONFIG.PCW_IRQ_F2P_INTR {1} \
-  CONFIG.PCW_USE_FABRIC_INTERRUPT {1} \
-] [get_bd_cells processing_system7_0]
-endgroup
-startgroup
-set_property -dict [list \
-  CONFIG.PCW_ENET0_GRP_MDIO_ENABLE {1} \
-  CONFIG.PCW_ENET0_GRP_MDIO_IO {MIO 52 .. 53} \
-  CONFIG.PCW_UART0_PERIPHERAL_ENABLE {0} \
-  CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} \
-  CONFIG.PCW_UART1_UART1_IO {MIO 48 .. 49} \
-] [get_bd_cells processing_system7_0]
-endgroup
-delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0]
-delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
-delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N]
-delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_dma_0_M_AXI_SG] [get_bd_intf_nets axi_mem_intercon_M00_AXI] [get_bd_cells axi_mem_intercon]
-set_property location {4.5 1258 235} [get_bd_cells smartconnect_0]
-delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells ps7_0_axi_periph]
-set_property location {1.5 563 -13} [get_bd_cells smartconnect_1]
-regenerate_bd_layout
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
-delete_bd_objs [get_bd_cells proc_sys_reset_1]
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins proc_sys_reset_0/ext_reset_in]
-set_property -dict [list \
-  CONFIG.NUM_MI {2} \
-  CONFIG.NUM_SI {1} \
-] [get_bd_cells smartconnect_0]
-connect_bd_intf_net [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins smartconnect_0/S00_AXI]
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins smartconnect_0/aclk]
-delete_bd_objs [get_bd_nets proc_sys_reset_0_peripheral_aresetn]
-connect_bd_net [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins smartconnect_0/aresetn]
-set_property CONFIG.NUM_SI {1} [get_bd_cells smartconnect_1]
-connect_bd_intf_net [get_bd_intf_pins smartconnect_1/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins smartconnect_1/aclk]
-connect_bd_net [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins smartconnect_1/aresetn]
-delete_bd_objs [get_bd_cells axi_dma_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_0
-endgroup
-set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC PROPAGATED] [get_bd_cells axi_vdma_0]
-set_property -dict [list \
-  CONFIG.c_enable_vert_flip {0} \
-  CONFIG.c_include_mm2s {0} \
-  CONFIG.c_num_fstores {2} \
-  CONFIG.c_s2mm_max_burst_length {256} \
-] [get_bd_cells axi_vdma_0]
-connect_bd_intf_net [get_bd_intf_pins smartconnect_0/M00_AXI] [get_bd_intf_pins axi_vdma_0/S_AXI_LITE]
-connect_bd_intf_net [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM] [get_bd_intf_pins smartconnect_1/S00_AXI]
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axi_vdma_0/s_axi_lite_aclk]
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk]
-connect_bd_net [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins axi_vdma_0/axi_resetn]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
-endgroup
-set_property -dict [list \
-  CONFIG.C_ALL_OUTPUTS {1} \
-  CONFIG.C_DOUT_DEFAULT {0x3} \
-  CONFIG.C_GPIO_WIDTH {2} \
-] [get_bd_cells axi_gpio_0]
-connect_bd_intf_net [get_bd_intf_pins smartconnect_0/M01_AXI] [get_bd_intf_pins axi_gpio_0/S_AXI]
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axi_gpio_0/s_axi_aclk]
-connect_bd_net [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn]
-startgroup
-make_bd_pins_external  [get_bd_cells axi_gpio_0]
-make_bd_intf_pins_external  [get_bd_cells axi_gpio_0]
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0
-endgroup
-set_property -dict [list CONFIG.HAS_TSTRB.VALUE_SRC USER CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.HAS_TLAST.VALUE_SRC USER CONFIG.HAS_TKEEP.VALUE_SRC USER] [get_bd_cells axis_data_fifo_0]
-set_property -dict [list \
-  CONFIG.HAS_TLAST {1} \
-  CONFIG.IS_ACLK_ASYNC {1} \
-  CONFIG.TDATA_NUM_BYTES {2} \
-] [get_bd_cells axis_data_fifo_0]
-regenerate_bd_layout
-set_property CONFIG.NUM_PORTS {1} [get_bd_cells xlconcat_0]
-connect_bd_net [get_bd_pins axi_vdma_0/s2mm_introut] [get_bd_pins xlconcat_0/In0]
-connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
-startgroup
-make_bd_pins_external  [get_bd_pins processing_system7_0/FCLK_CLK1]
-endgroup
-regenerate_bd_layout
-connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axis_data_fifo_0/s_axis_aclk]
-connect_bd_net [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn]
-connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM]
-startgroup
-make_bd_intf_pins_external  [get_bd_intf_pins processing_system7_0/IIC_0]
-endgroup
-undo
-startgroup
-make_bd_intf_pins_external  [get_bd_intf_pins processing_system7_0/IIC_0]
-endgroup
-delete_bd_objs [get_bd_intf_nets processing_system7_0_IIC_0] [get_bd_intf_ports IIC_0_0]
-startgroup
-make_bd_pins_external  [get_bd_pins processing_system7_0/I2C0_SDA_I]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins processing_system7_0/I2C0_SCL_O]
-endgroup
-regenerate_bd_layout
-regenerate_bd_layout
-regenerate_bd_layout
-save_bd_design
+  CONFIG.CONST_VAL {0} \
+  CONFIG.CONST_WIDTH {1} \
+] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins ov7670_controller_0/resend]
+set_property location {1 266 690} [get_bd_cells xlconstant_0]
+connect_bd_intf_net [get_bd_intf_pins ov7670_axi_stream_ca_0/m_axis] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
 startgroup
 apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk]
 apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
 apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK]
 endgroup
-undo
-redo
-undo
-redo
-undo
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK]
-endgroup
-undo
-redo
-undo
+assign_bd_address
+validate_bd_design
 save_bd_design
