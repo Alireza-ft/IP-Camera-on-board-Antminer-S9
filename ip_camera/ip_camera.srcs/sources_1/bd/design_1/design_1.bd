@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6DD80F117EC9624D",
+      "boundary_crc": "0x6DD80F110149194D",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../ip_camera.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -1393,7 +1393,7 @@
             "value": "1"
           },
           "TDATA_NUM_BYTES": {
-            "value": "2"
+            "value": "4"
           }
         },
         "interface_ports": {
@@ -1705,7 +1705,8 @@
       "pclk_0_1": {
         "ports": [
           "pclk_0",
-          "ov7670_axi_stream_ca_0/pclk"
+          "ov7670_axi_stream_ca_0/pclk",
+          "axis_data_fifo_0/s_axis_aclk"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
@@ -1727,12 +1728,11 @@
           "axi_vdma_0/s_axi_lite_aclk",
           "axi_vdma_0/m_axi_s2mm_aclk",
           "axi_gpio_0/s_axi_aclk",
-          "axis_data_fifo_0/s_axis_aclk",
           "ov7670_controller_0/clk",
           "axi_vdma_0/s_axis_s2mm_aclk",
           "axis_data_fifo_0/m_axis_aclk",
-          "processing_system7_0/M_AXI_GP0_ACLK",
-          "processing_system7_0/S_AXI_HP0_ACLK"
+          "processing_system7_0/S_AXI_HP0_ACLK",
+          "processing_system7_0/M_AXI_GP0_ACLK"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {
