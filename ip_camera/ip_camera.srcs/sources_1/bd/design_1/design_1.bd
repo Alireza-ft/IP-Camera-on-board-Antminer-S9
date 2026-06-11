@@ -7,7 +7,8 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.1"
+      "tool_version": "2024.1",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -20,7 +21,8 @@
       "axis_data_fifo_0": "",
       "ov7670_axi_stream_ca_0": "",
       "ov7670_controller_0": "",
-      "xlconstant_0": ""
+      "xlconstant_0": "",
+      "proc_sys_reset_cam": ""
     },
     "interface_ports": {
       "DDR": {
@@ -231,7 +233,17 @@
       },
       "reset_0": {
         "type": "rst",
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "pwdn_0": {
         "direction": "O"
@@ -1561,6 +1573,13 @@
             "value": "1"
           }
         }
+      },
+      "proc_sys_reset_cam": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "15",
+        "xci_name": "design_1_proc_sys_reset_1_0",
+        "xci_path": "ip\\design_1_proc_sys_reset_1_0\\design_1_proc_sys_reset_1_0.xci",
+        "inst_hier_path": "proc_sys_reset_cam"
       }
     },
     "interface_nets": {
@@ -1584,8 +1603,8 @@
       },
       "ov7670_axi_stream_ca_0_m_axis": {
         "interface_ports": [
-          "ov7670_axi_stream_ca_0/m_axis",
-          "axis_data_fifo_0/S_AXIS"
+          "axis_data_fifo_0/S_AXIS",
+          "ov7670_axi_stream_ca_0/m_axis"
         ]
       },
       "processing_system7_0_DDR": {
@@ -1650,6 +1669,13 @@
           "ov7670_axi_stream_ca_0/href"
         ]
       },
+      "ov7670_axi_stream_ca_0_aclk": {
+        "ports": [
+          "ov7670_axi_stream_ca_0/aclk",
+          "proc_sys_reset_cam/slowest_sync_clk",
+          "axis_data_fifo_0/s_axis_aclk"
+        ]
+      },
       "ov7670_controller_0_config_finished": {
         "ports": [
           "ov7670_controller_0/config_finished",
@@ -1683,8 +1709,7 @@
       "pclk_0_1": {
         "ports": [
           "pclk_0",
-          "ov7670_axi_stream_ca_0/pclk",
-          "axis_data_fifo_0/s_axis_aclk"
+          "ov7670_axi_stream_ca_0/pclk"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
@@ -1693,7 +1718,12 @@
           "smartconnect_0/aresetn",
           "smartconnect_1/aresetn",
           "axi_vdma_0/axi_resetn",
-          "axi_gpio_0/s_axi_aresetn",
+          "axi_gpio_0/s_axi_aresetn"
+        ]
+      },
+      "proc_sys_reset_cam_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_cam/peripheral_aresetn",
           "axis_data_fifo_0/s_axis_aresetn"
         ]
       },
@@ -1721,7 +1751,8 @@
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
-          "proc_sys_reset_0/ext_reset_in"
+          "proc_sys_reset_0/ext_reset_in",
+          "proc_sys_reset_cam/ext_reset_in"
         ]
       },
       "vsync_0_1": {
