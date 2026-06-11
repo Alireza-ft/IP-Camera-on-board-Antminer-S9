@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Jun 11 18:20:40 2026
-# Process ID: 6684
+# Start of session at: Tue Jun  9 00:51:51 2026
+# Process ID: 1308
 # Current directory: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7508 C:\Users\Arf\Desktop\ip_camera\New folder\IP-Camera-on-board-Antminer-S9\ip_camera\ip_camera.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8280 C:\Users\Arf\Desktop\ip_camera\New folder\IP-Camera-on-board-Antminer-S9\ip_camera\ip_camera.xpr
 # Log file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/vivado.log
 # Journal file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera\vivado.jou
 # Running On        :DESKTOP-GTOUM49
@@ -17,9 +17,9 @@
 # CPU Physical cores:2
 # CPU Logical cores :4
 # Host memory       :3688 MB
-# Swap memory       :4161 MB
-# Total Virtual     :7850 MB
-# Available Virtual :5378 MB
+# Swap memory       :4162 MB
+# Total Virtual     :7851 MB
+# Available Virtual :4276 MB
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.xpr}
@@ -146,7 +146,7 @@ WARNING: [BD 41-2576] File 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-
 WARNING: [BD 41-2576] File 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_8/bd_88fd_sbn_0.xci' referenced by design 'bd_88fd' could not be found.
 WARNING: [BD 41-2576] File 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_9/bd_88fd_m00s2a_0.xci' referenced by design 'bd_88fd' could not be found.
 WARNING: [BD 41-2576] File 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_10/bd_88fd_m00e_0.xci' referenced by design 'bd_88fd' could not be found.
-open_project: Time (s): cpu = 00:00:55 ; elapsed = 00:01:29 . Memory (MB): peak = 1479.273 ; gain = 450.434
+open_project: Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1465.984 ; gain = 404.824
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd}
 Reading block design file <C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd>...
@@ -166,55 +166,54 @@ INFO: [BD 41-433]
 Design successfully migrated to use XCI files...
 INFO: [BD 41-433] 
 Design successfully migrated to use XCI files...
-open_bd_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:07 . Memory (MB): peak = 1629.977 ; gain = 129.586
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+open_bd_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:25 . Memory (MB): peak = 1623.371 ; gain = 139.434
+regenerate_bd_layout
+validate_bd_design
+INFO: [BD 5-943] Reserving offset range <0x4300_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4120_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: SmartConnect design_1_smartconnect_0_0 is in Low-Area Mode.
+WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: IP design_1_smartconnect_0_0 is configured in Low-area mode as all propagated traffic is low-bandwidth (AXI4LITE). SI S00_AXI has property HAS_BURST == 1. WRAP bursts are not supported in Low-area mode and will result in DECERR if received.
+WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: If WRAP transactions are required then turn off Low-area mode using ADVANCED_PROPERTIES. Execute following: set_property CONFIG.ADVANCED_PROPERTIES {__experimental_features__ {disable_low_area_mode 1}} [get_bd_cells /design_1_smartconnect_0_0]
+xit::source_ipfile: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1669.164 ; gain = 0.055
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 1G ]> from slave interface '/smartconnect_1/S00_AXI' to master interface '/smartconnect_1/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_1_0: SmartConnect design_1_smartconnect_1_0 is in High-performance Mode.
+ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /axis_data_fifo_0/S_AXIS(design_1_processing_system7_0_0_FCLK_CLK0) and /ov7670_axi_stream_ca_0/m_axis(design_1_ov7670_axi_stream_ca_0_0_aclk)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /axis_data_fifo_0/S_AXIS(2) and /ov7670_axi_stream_ca_0/m_axis(4)
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1685.098 ; gain = 30.152
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
 startgroup
-set_property CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {0} [get_bd_cells processing_system7_0]
-WARNING: [BD 41-1684] Pin /processing_system7_0/I2C0_SDA_I is now disabled. All connections to this pin have been removed. 
-WARNING: [BD 41-1684] Pin /processing_system7_0/I2C0_SCL_O is now disabled. All connections to this pin have been removed. 
-delete_bd_objs [get_bd_nets I2C0_SDA_I_0_1] [get_bd_nets processing_system7_0_I2C0_SCL_O]
+set_property CONFIG.TDATA_NUM_BYTES {4} [get_bd_cells axis_data_fifo_0]
 endgroup
-delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK1] [get_bd_ports FCLK_CLK1_0]
-delete_bd_objs [get_bd_ports I2C0_SCL_O_0]
-validate_bd_design
-INFO: [BD 5-943] Reserving offset range <0x4300_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M00_AXI'. This will be used by smartconnect on path for routing.
-INFO: [BD 5-943] Reserving offset range <0x4120_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M01_AXI'. This will be used by smartconnect on path for routing.
-INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: SmartConnect design_1_smartconnect_0_0 is in Low-Area Mode.
-WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: IP design_1_smartconnect_0_0 is configured in Low-area mode as all propagated traffic is low-bandwidth (AXI4LITE). SI S00_AXI has property HAS_BURST == 1. WRAP bursts are not supported in Low-area mode and will result in DECERR if received.
-WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: If WRAP transactions are required then turn off Low-area mode using ADVANCED_PROPERTIES. Execute following: set_property CONFIG.ADVANCED_PROPERTIES {__experimental_features__ {disable_low_area_mode 1}} [get_bd_cells /design_1_smartconnect_0_0]
-INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 1G ]> from slave interface '/smartconnect_1/S00_AXI' to master interface '/smartconnect_1/M00_AXI'. This will be used by smartconnect on path for routing.
-INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_1_0: SmartConnect design_1_smartconnect_1_0 is in High-performance Mode.
-ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /axis_data_fifo_0/S_AXIS(design_1_processing_system7_0_0_FCLK_CLK0) and /ov7670_axi_stream_ca_0/m_axis(design_1_ov7670_axi_stream_ca_0_0_aclk)
-validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1727.910 ; gain = 7.383
-ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
-disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins ov7670_controller_0/clk]
-connect_bd_net [get_bd_pins ov7670_controller_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK1]
-validate_bd_design
-INFO: [BD 5-943] Reserving offset range <0x4300_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M00_AXI'. This will be used by smartconnect on path for routing.
-INFO: [BD 5-943] Reserving offset range <0x4120_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M01_AXI'. This will be used by smartconnect on path for routing.
-INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: SmartConnect design_1_smartconnect_0_0 is in Low-Area Mode.
-WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: IP design_1_smartconnect_0_0 is configured in Low-area mode as all propagated traffic is low-bandwidth (AXI4LITE). SI S00_AXI has property HAS_BURST == 1. WRAP bursts are not supported in Low-area mode and will result in DECERR if received.
-WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: If WRAP transactions are required then turn off Low-area mode using ADVANCED_PROPERTIES. Execute following: set_property CONFIG.ADVANCED_PROPERTIES {__experimental_features__ {disable_low_area_mode 1}} [get_bd_cells /design_1_smartconnect_0_0]
-INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 1G ]> from slave interface '/smartconnect_1/S00_AXI' to master interface '/smartconnect_1/M00_AXI'. This will be used by smartconnect on path for routing.
-INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_1_0: SmartConnect design_1_smartconnect_1_0 is in High-performance Mode.
-ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /axis_data_fifo_0/S_AXIS(design_1_processing_system7_0_0_FCLK_CLK0) and /ov7670_axi_stream_ca_0/m_axis(design_1_ov7670_axi_stream_ca_0_0_aclk)
-validate_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1745.746 ; gain = 17.836
-ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
-delete_bd_objs [get_bd_ports I2C0_SDA_I_0]
-validate_bd_design
-INFO: [BD 5-943] Reserving offset range <0x4300_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M00_AXI'. This will be used by smartconnect on path for routing.
-INFO: [BD 5-943] Reserving offset range <0x4120_0000 [ 64K ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M01_AXI'. This will be used by smartconnect on path for routing.
-INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: SmartConnect design_1_smartconnect_0_0 is in Low-Area Mode.
-WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: IP design_1_smartconnect_0_0 is configured in Low-area mode as all propagated traffic is low-bandwidth (AXI4LITE). SI S00_AXI has property HAS_BURST == 1. WRAP bursts are not supported in Low-area mode and will result in DECERR if received.
-WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_0_0: If WRAP transactions are required then turn off Low-area mode using ADVANCED_PROPERTIES. Execute following: set_property CONFIG.ADVANCED_PROPERTIES {__experimental_features__ {disable_low_area_mode 1}} [get_bd_cells /design_1_smartconnect_0_0]
-INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 1G ]> from slave interface '/smartconnect_1/S00_AXI' to master interface '/smartconnect_1/M00_AXI'. This will be used by smartconnect on path for routing.
-INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_smartconnect_1_0: SmartConnect design_1_smartconnect_1_0 is in High-performance Mode.
-ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /axis_data_fifo_0/S_AXIS(design_1_processing_system7_0_0_FCLK_CLK0) and /ov7670_axi_stream_ca_0/m_axis(design_1_ov7670_axi_stream_ca_0_0_aclk)
-validate_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1769.879 ; gain = 5.773
-ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
 save_bd_design
 Wrote  : <C:\Users\Arf\Desktop\ip_camera\New folder\IP-Camera-on-board-Antminer-S9\ip_camera\ip_camera.srcs\sources_1\bd\design_1\design_1.bd> 
 Wrote  : <C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-save_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1769.879 ; gain = 0.000
+save_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1730.203 ; gain = 31.977
+disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK]
+validate_bd_design
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/processing_system7_0/M_AXI_GP0_ACLK
+/processing_system7_0/S_AXI_HP0_ACLK
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK]
+endgroup
+set_property location {5 1455 438} [get_bd_cells smartconnect_1]
+undo
+INFO: [Common 17-17] undo 'set_property location {5 1455 438} [get_bd_cells smartconnect_1]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK]'
+undo
+INFO: [Common 17-17] undo 'disconnect_bd_net /processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]'
+save_bd_design
+Wrote  : <C:\Users\Arf\Desktop\ip_camera\New folder\IP-Camera-on-board-Antminer-S9\ip_camera\ip_camera.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 11 18:46:17 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 01:20:47 2026...
