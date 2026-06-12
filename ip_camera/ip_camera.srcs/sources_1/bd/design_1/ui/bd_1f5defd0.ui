@@ -34,6 +34,7 @@ preplace netloc Net 1 5 1 NJ 810
 preplace netloc axi_vdma_0_s2mm_introut 1 3 1 1100J 370n
 preplace netloc d_0_1 1 0 1 NJ 150
 preplace netloc href_0_1 1 0 1 NJ 130
+preplace netloc ov7670_axi_stream_ca_0_aclk 1 1 2 360 -40 NJ
 preplace netloc ov7670_controller_0_config_finished 1 5 1 NJ 770
 preplace netloc ov7670_controller_0_pwdn 1 5 1 NJ 850
 preplace netloc ov7670_controller_0_reset 1 5 1 NJ 830
@@ -41,24 +42,23 @@ preplace netloc ov7670_controller_0_sioc 1 5 1 NJ 790
 preplace netloc ov7670_controller_0_xclk 1 5 1 NJ 870
 preplace netloc pclk_0_1 1 0 1 -30 40n
 preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 4 360 550 740 470 1130 490 1410J
+preplace netloc proc_sys_reset_cam_peripheral_aresetn 1 1 3 390 -10 740J 100 1100
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 -20 470 380 220 740 220 1130 240 1500 370 2030
+preplace netloc processing_system7_0_FCLK_CLK1 1 4 2 1520 380 2010
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 -30 210 NJ 210 730J 210 NJ 210 1430J 360 2000
 preplace netloc vsync_0_1 1 0 1 NJ 110
 preplace netloc xlconcat_0_dout 1 4 1 1510 280n
 preplace netloc xlconstant_0_dout 1 4 1 NJ 830
-preplace netloc processing_system7_0_FCLK_CLK1 1 4 2 1520 380 2010
-preplace netloc ov7670_axi_stream_ca_0_aclk 1 1 2 360 -40 NJ
-preplace netloc proc_sys_reset_cam_peripheral_aresetn 1 1 3 390 -10 740J 100 1100
 preplace netloc axi_gpio_0_GPIO 1 5 1 NJ 650
 preplace netloc axi_vdma_0_M_AXI_S2MM 1 3 1 1110 330n
 preplace netloc axis_data_fifo_0_M_AXIS 1 2 1 680 80n
+preplace netloc ov7670_axi_stream_ca_0_m_axis 1 1 1 370 50n
 preplace netloc processing_system7_0_DDR 1 5 1 2050J 190n
 preplace netloc processing_system7_0_FIXED_IO 1 5 1 2040J 210n
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 390 230 NJ 230 NJ 230 1420J 350 2020
 preplace netloc smartconnect_0_M00_AXI 1 2 1 670 290n
 preplace netloc smartconnect_0_M01_AXI 1 2 3 670 630 NJ 630 NJ
 preplace netloc smartconnect_1_M00_AXI 1 4 1 1410 200n
-preplace netloc ov7670_axi_stream_ca_0_m_axis 1 1 1 370 50n
 levelinfo -pg 1 -50 150 530 920 1270 1760 2070
 pagesize -pg 1 -db -bbox -sgen -160 -100 2260 930
 "

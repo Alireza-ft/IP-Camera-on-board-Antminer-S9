@@ -3,11 +3,11 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri Jun 12 01:05:24 2026
-# Process ID: 8120
+# Start of session at: Fri Jun 12 18:25:40 2026
+# Process ID: 7060
 # Current directory: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/impl_1
-# Command line: vivado.exe -log ov7670_controller.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ov7670_controller.tcl -notrace
-# Log file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/impl_1/ov7670_controller.vdi
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/impl_1/design_1_wrapper.vdi
 # Journal file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/impl_1\vivado.jou
 # Running On        :DESKTOP-GTOUM49
 # Platform          :Windows Server 2016 or Windows 10
@@ -17,8 +17,8 @@
 # CPU Physical cores:2
 # CPU Logical cores :4
 # Host memory       :3688 MB
-# Swap memory       :5455 MB
-# Total Virtual     :9144 MB
-# Available Virtual :2134 MB
+# Swap memory       :5269 MB
+# Total Virtual     :8958 MB
+# Available Virtual :3994 MB
 #-----------------------------------------------------------
-source ov7670_controller.tcl -notrace
+source design_1_wrapper.tcl -notrace

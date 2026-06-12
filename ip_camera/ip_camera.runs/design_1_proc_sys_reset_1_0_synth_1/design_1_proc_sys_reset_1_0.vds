@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Jun 12 18:06:08 2026
+# Process ID: 6020
+# Current directory: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1
+# Command line: vivado.exe -log design_1_proc_sys_reset_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_proc_sys_reset_1_0.tcl
+# Log file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0.vds
+# Journal file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1\vivado.jou
+# Running On        :DESKTOP-GTOUM49
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :Intel(R) Core(TM) i3-8130U CPU @ 2.20GHz
+# CPU Frequency     :2208 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :3688 MB
+# Swap memory       :5272 MB
+# Total Virtual     :8961 MB
+# Available Virtual :3918 MB
+#-----------------------------------------------------------
+source design_1_proc_sys_reset_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 498.594 ; gain = 202.918
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_proc_sys_reset_1_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry bdaa135713cc94e8 to dir: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.cache/ip/2024.1/b/d/bdaa135713cc94e8/design_1_proc_sys_reset_0_0.dcp to C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.cache/ip/2024.1/b/d/bdaa135713cc94e8/design_1_proc_sys_reset_0_0_sim_netlist.v to C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.cache/ip/2024.1/b/d/bdaa135713cc94e8/design_1_proc_sys_reset_0_0_sim_netlist.vhdl to C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.cache/ip/2024.1/b/d/bdaa135713cc94e8/design_1_proc_sys_reset_0_0_stub.v to C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.cache/ip/2024.1/b/d/bdaa135713cc94e8/design_1_proc_sys_reset_0_0_stub.vhdl to C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_proc_sys_reset_1_0, cache-ID = bdaa135713cc94e8.
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 12 18:07:24 2026...
