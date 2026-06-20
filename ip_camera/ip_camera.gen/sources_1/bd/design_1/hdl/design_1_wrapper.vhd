@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Fri Jun 12 17:25:16 2026
+--Date        : Sat Jun 20 20:43:17 2026
 --Host        : DESKTOP-GTOUM49 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -35,13 +35,9 @@ entity design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    GPIO_0_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    config_finished_0 : out STD_LOGIC;
     d_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     href_0 : in STD_LOGIC;
     pclk_0 : in STD_LOGIC;
-    pwdn_0 : out STD_LOGIC;
-    reset_0 : out STD_LOGIC;
     sioc_0 : out STD_LOGIC;
     siod_0 : inout STD_LOGIC;
     vsync_0 : in STD_LOGIC;
@@ -73,16 +69,12 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    GPIO_0_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
     pclk_0 : in STD_LOGIC;
     vsync_0 : in STD_LOGIC;
     href_0 : in STD_LOGIC;
     d_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    config_finished_0 : out STD_LOGIC;
     sioc_0 : out STD_LOGIC;
     siod_0 : inout STD_LOGIC;
-    reset_0 : out STD_LOGIC;
-    pwdn_0 : out STD_LOGIC;
     xclk_0 : out STD_LOGIC
   );
   end component design_1;
@@ -110,13 +102,9 @@ design_1_i: component design_1
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      GPIO_0_tri_o(1 downto 0) => GPIO_0_tri_o(1 downto 0),
-      config_finished_0 => config_finished_0,
       d_0(7 downto 0) => d_0(7 downto 0),
       href_0 => href_0,
       pclk_0 => pclk_0,
-      pwdn_0 => pwdn_0,
-      reset_0 => reset_0,
       sioc_0 => sioc_0,
       siod_0 => siod_0,
       vsync_0 => vsync_0,

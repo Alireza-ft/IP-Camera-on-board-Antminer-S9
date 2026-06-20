@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
--- Date        : Fri Jun 12 17:35:17 2026
+-- Date        : Sat Jun 20 20:54:16 2026
 -- Host        : DESKTOP-GTOUM49 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub {c:/Users/Arf/Desktop/ip_camera/New
 --               folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_stub.vhdl}

@@ -8,16 +8,16 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Fri Jun 12 18:09:36 2026
+  **** Start of session at: Sat Jun 20 21:22:20 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 495.438 ; gain = 198.055
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 498.652 ; gain = 200.633
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/xilinx/Vivado/2024.1/data/ip'.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:41 . Memory (MB): peak = 524.328 ; gain = 28.891
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 522.188 ; gain = 23.535
 Command: read_checkpoint -auto_incremental -incremental {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/utils_1/imports/synth_1/ov7670_controller.dcp}
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/utils_1/imports/synth_1/ov7670_controller.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,47 +27,47 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8976
+INFO: [Synth 8-7075] Helper process launched with PID 124
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1405.215 ; gain = 449.457
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1404.340 ; gain = 450.105
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:52]
-INFO: [Synth 8-3491] module 'design_1' declared at 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:15' bound to instance 'design_1_i' of component 'design_1' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:90]
-INFO: [Synth 8-638] synthesizing module 'design_1' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:56]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_axi_gpio_0_0_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:683]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_vdma_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_axi_vdma_0_0_stub.vhdl:6' bound to instance 'axi_vdma_0' of component 'design_1_axi_vdma_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:706]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_vdma_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_axi_vdma_0_0_stub.vhdl:57]
-INFO: [Synth 8-3491] module 'design_1_axis_data_fifo_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:6' bound to instance 'axis_data_fifo_0' of component 'design_1_axis_data_fifo_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:754]
-INFO: [Synth 8-638] synthesizing module 'design_1_axis_data_fifo_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'design_1_ov7670_axi_stream_ca_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_ov7670_axi_stream_ca_0_0_stub.vhdl:6' bound to instance 'ov7670_axi_stream_ca_0' of component 'design_1_ov7670_axi_stream_ca_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:770]
-INFO: [Synth 8-638] synthesizing module 'design_1_ov7670_axi_stream_ca_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_ov7670_axi_stream_ca_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_1_ov7670_controller_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_ov7670_controller_0_0_stub.vhdl:6' bound to instance 'ov7670_controller_0' of component 'design_1_ov7670_controller_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:783]
-INFO: [Synth 8-638] synthesizing module 'design_1_ov7670_controller_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_ov7670_controller_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'design_1_proc_sys_reset_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'design_1_proc_sys_reset_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:794]
-INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_proc_sys_reset_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_1_proc_sys_reset_1_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_proc_sys_reset_1_0_stub.vhdl:6' bound to instance 'proc_sys_reset_cam' of component 'design_1_proc_sys_reset_1_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:807]
-INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_1_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_proc_sys_reset_1_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:820]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_processing_system7_0_0_stub.vhdl:132]
-INFO: [Synth 8-3491] module 'design_1_smartconnect_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_smartconnect_0_0_stub.vhdl:6' bound to instance 'smartconnect_0' of component 'design_1_smartconnect_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:943]
-INFO: [Synth 8-638] synthesizing module 'design_1_smartconnect_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_smartconnect_0_0_stub.vhdl:90]
-INFO: [Synth 8-3491] module 'design_1_smartconnect_1_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_smartconnect_1_0_stub.vhdl:6' bound to instance 'smartconnect_1' of component 'design_1_smartconnect_1_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:1024]
-INFO: [Synth 8-638] synthesizing module 'design_1_smartconnect_1_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-5576-DESKTOP-GTOUM49/realtime/design_1_smartconnect_1_0_stub.vhdl:50]
-INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:1065]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:48]
+INFO: [Synth 8-3491] module 'design_1' declared at 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:15' bound to instance 'design_1_i' of component 'design_1' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'design_1' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:52]
+INFO: [Synth 8-3491] module 'design_1_axi_vdma_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_axi_vdma_0_0_stub.vhdl:6' bound to instance 'axi_vdma_0' of component 'design_1_axi_vdma_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:639]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_vdma_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_axi_vdma_0_0_stub.vhdl:57]
+INFO: [Synth 8-3491] module 'design_1_axis_data_fifo_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:6' bound to instance 'axis_data_fifo_0' of component 'design_1_axis_data_fifo_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:687]
+INFO: [Synth 8-638] synthesizing module 'design_1_axis_data_fifo_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_1_ov7670_axi_stream_ca_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_ov7670_axi_stream_ca_0_0_stub.vhdl:6' bound to instance 'ov7670_axi_stream_ca_0' of component 'design_1_ov7670_axi_stream_ca_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:703]
+INFO: [Synth 8-638] synthesizing module 'design_1_ov7670_axi_stream_ca_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_ov7670_axi_stream_ca_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_ov7670_controller_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_ov7670_controller_0_0_stub.vhdl:6' bound to instance 'ov7670_controller_0' of component 'design_1_ov7670_controller_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:716]
+INFO: [Synth 8-638] synthesizing module 'design_1_ov7670_controller_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_ov7670_controller_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'design_1_proc_sys_reset_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'design_1_proc_sys_reset_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:727]
+INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_proc_sys_reset_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_proc_sys_reset_1_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_proc_sys_reset_1_0_stub.vhdl:6' bound to instance 'proc_sys_reset_cam' of component 'design_1_proc_sys_reset_1_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:740]
+INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_1_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_proc_sys_reset_1_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:753]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_processing_system7_0_0_stub.vhdl:132]
+INFO: [Synth 8-3491] module 'design_1_smartconnect_0_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_smartconnect_0_0_stub.vhdl:6' bound to instance 'smartconnect_0' of component 'design_1_smartconnect_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:876]
+INFO: [Synth 8-638] synthesizing module 'design_1_smartconnect_0_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_smartconnect_0_0_stub.vhdl:90]
+INFO: [Synth 8-3491] module 'design_1_smartconnect_1_0' declared at 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_smartconnect_1_0_stub.vhdl:6' bound to instance 'smartconnect_1' of component 'design_1_smartconnect_1_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:957]
+INFO: [Synth 8-638] synthesizing module 'design_1_smartconnect_1_0' [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/.Xil/Vivado-7788-DESKTOP-GTOUM49/realtime/design_1_smartconnect_1_0_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:998]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:1070]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:1003]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:56]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/synth/design_1.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:48]
 WARNING: [Synth 8-7129] Port In1[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
@@ -170,18 +170,18 @@ WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_6_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1525.590 ; gain = 569.832
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1523.766 ; gain = 569.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1525.590 ; gain = 569.832
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1523.766 ; gain = 569.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1525.590 ; gain = 569.832
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1523.766 ; gain = 569.531
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 1525.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1523.766 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -196,8 +196,6 @@ Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-A
 Finished Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/design_1_smartconnect_1_0/design_1_smartconnect_1_0_in_context.xdc] for cell 'design_1_i/smartconnect_1'
 Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
 Finished Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
-Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
-Finished Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
 Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_0'
 Finished Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_0'
 Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_ov7670_axi_stream_ca_0_0/design_1_ov7670_axi_stream_ca_0_0/design_1_ov7670_axi_stream_ca_0_0_in_context.xdc] for cell 'design_1_i/ov7670_axi_stream_ca_0'
@@ -206,24 +204,30 @@ Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-A
 Finished Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_ov7670_controller_0_0/design_1_ov7670_controller_0_0/design_1_ov7670_controller_0_0_in_context.xdc] for cell 'design_1_i/ov7670_controller_0'
 Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_cam'
 Finished Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_cam'
+Parsing XDC File [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc]
+Finished Parsing XDC File [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1529.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1543.297 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.416 . Memory (MB): peak = 1529.680 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.807 . Memory (MB): peak = 1543.297 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:57 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -495,38 +499,17 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/smartconnect_0. (const
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/smartconnect_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_vdma_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_data_fifo_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ov7670_axi_stream_ca_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ov7670_controller_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/proc_sys_reset_cam. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:57 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Preparing Guide Design
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/utils_1/imports/synth_1/ov7670_controller.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 1529.680 ; gain = 573.922
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 1529.680 ; gain = 573.922
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 1529.680 ; gain = 573.922
----------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : 
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -548,25 +531,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:01:02 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:01:02 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:12 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:14 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:01:13 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:14 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:01:13 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:14 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -584,37 +567,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:01:22 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:01:22 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:01:22 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:01:22 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:01:22 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:01:22 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -624,57 +607,54 @@ Report BlackBoxes:
 +------+----------------------------------+----------+
 |      |BlackBox name                     |Instances |
 +------+----------------------------------+----------+
-|1     |design_1_axi_gpio_0_0             |         1|
-|2     |design_1_axi_vdma_0_0             |         1|
-|3     |design_1_axis_data_fifo_0_0       |         1|
-|4     |design_1_ov7670_axi_stream_ca_0_0 |         1|
-|5     |design_1_ov7670_controller_0_0    |         1|
-|6     |design_1_proc_sys_reset_0_0       |         1|
-|7     |design_1_proc_sys_reset_1_0       |         1|
-|8     |design_1_processing_system7_0_0   |         1|
-|9     |design_1_smartconnect_0_0         |         1|
-|10    |design_1_smartconnect_1_0         |         1|
+|1     |design_1_axi_vdma_0_0             |         1|
+|2     |design_1_axis_data_fifo_0_0       |         1|
+|3     |design_1_ov7670_axi_stream_ca_0_0 |         1|
+|4     |design_1_ov7670_controller_0_0    |         1|
+|5     |design_1_proc_sys_reset_0_0       |         1|
+|6     |design_1_proc_sys_reset_1_0       |         1|
+|7     |design_1_processing_system7_0_0   |         1|
+|8     |design_1_smartconnect_0_0         |         1|
+|9     |design_1_smartconnect_1_0         |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
 +------+---------------------------------------+------+
 |      |Cell                                   |Count |
 +------+---------------------------------------+------+
-|1     |design_1_axi_gpio_0_0_bbox             |     1|
-|2     |design_1_axi_vdma_0_0_bbox             |     1|
-|3     |design_1_axis_data_fifo_0_0_bbox       |     1|
-|4     |design_1_ov7670_axi_stream_ca_0_0_bbox |     1|
-|5     |design_1_ov7670_controller_0_0_bbox    |     1|
-|6     |design_1_proc_sys_reset_0_0_bbox       |     1|
-|7     |design_1_proc_sys_reset_1_0_bbox       |     1|
-|8     |design_1_processing_system7_0_0_bbox   |     1|
-|9     |design_1_smartconnect_0_0_bbox         |     1|
-|10    |design_1_smartconnect_1_0_bbox         |     1|
-|11    |IBUF                                   |    11|
-|12    |OBUF                                   |     7|
+|1     |design_1_axi_vdma_0_0_bbox             |     1|
+|2     |design_1_axis_data_fifo_0_0_bbox       |     1|
+|3     |design_1_ov7670_axi_stream_ca_0_0_bbox |     1|
+|4     |design_1_ov7670_controller_0_0_bbox    |     1|
+|5     |design_1_proc_sys_reset_0_0_bbox       |     1|
+|6     |design_1_proc_sys_reset_1_0_bbox       |     1|
+|7     |design_1_processing_system7_0_0_bbox   |     1|
+|8     |design_1_smartconnect_0_0_bbox         |     1|
+|9     |design_1_smartconnect_1_0_bbox         |     1|
+|10    |IBUF                                   |    11|
+|11    |OBUF                                   |     2|
 +------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:01:22 . Memory (MB): peak = 1543.297 ; gain = 589.062
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:01:05 . Memory (MB): peak = 1529.680 ; gain = 569.832
-Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:01:21 . Memory (MB): peak = 1529.680 ; gain = 573.922
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:01:01 . Memory (MB): peak = 1543.297 ; gain = 569.531
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:01:22 . Memory (MB): peak = 1543.297 ; gain = 589.062
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1529.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1543.297 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1529.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1543.297 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 9e10d308
+Synth Design complete | Checksum: aff772a3
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 101 Warnings, 1 Critical Warnings and 0 Errors encountered.
+57 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:51 . Memory (MB): peak = 1529.680 ; gain = 979.363
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.575 . Memory (MB): peak = 1529.680 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:02:03 . Memory (MB): peak = 1543.297 ; gain = 994.773
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 1543.297 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1529.680 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 1543.297 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 12 18:12:58 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 21:26:16 2026...

@@ -8,12 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Fri Jun 12 17:27:15 2026
+  **** Start of session at: Sat Jun 20 20:45:33 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_proc_sys_reset_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 497.488 ; gain = 197.918
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 494.266 ; gain = 199.137
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_proc_sys_reset_0_0
 Command: synth_design -top design_1_proc_sys_reset_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -23,9 +23,9 @@ INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8880
+INFO: [Synth 8-7075] Helper process launched with PID 3356
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:01:53 . Memory (MB): peak = 1359.457 ; gain = 448.316
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:01:09 . Memory (MB): peak = 1360.559 ; gain = 449.891
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/synth/design_1_proc_sys_reset_0_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -80,18 +80,18 @@ WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync is either uncon
 WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:02:22 . Memory (MB): peak = 1476.461 ; gain = 565.320
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:02:20 . Memory (MB): peak = 1478.184 ; gain = 567.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:02:24 . Memory (MB): peak = 1476.461 ; gain = 565.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:02:23 . Memory (MB): peak = 1478.184 ; gain = 567.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:02:24 . Memory (MB): peak = 1476.461 ; gain = 565.320
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:02:23 . Memory (MB): peak = 1478.184 ; gain = 567.516
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1476.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1478.184 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -110,33 +110,33 @@ Parsing XDC File [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-A
 Finished Parsing XDC File [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1499.277 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1581.301 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1505.504 ; gain = 6.227
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 1581.418 ; gain = 0.117
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:03:33 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:04:32 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:03:34 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:04:33 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_0_0_synth_1/dont_touch.xdc}, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:03:35 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:04:34 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:03:36 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:04:42 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -172,25 +172,25 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GE
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:03:42 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:04:54 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:04:10 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:05:14 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:04:11 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:05:14 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:04:13 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:05:15 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -208,37 +208,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:04:23 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:05:26 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:04:23 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:05:26 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:04:23 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:05:27 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:04:23 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:05:27 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:04:23 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:05:27 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:04:23 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:05:27 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -266,18 +266,18 @@ Report Cell Usage:
 |10    |FDSE  |     4|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:04:23 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:05:27 . Memory (MB): peak = 1581.418 ; gain = 670.750
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:03:33 . Memory (MB): peak = 1505.504 ; gain = 565.320
-Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:04:25 . Memory (MB): peak = 1505.504 ; gain = 594.363
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:03:40 . Memory (MB): peak = 1581.418 ; gain = 567.516
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:05:29 . Memory (MB): peak = 1581.418 ; gain = 670.750
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1505.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1581.418 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1505.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1581.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
@@ -287,13 +287,13 @@ Synth Design complete | Checksum: 1b7f188b
 INFO: [Common 17-83] Releasing license: Synthesis
 47 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:06:03 . Memory (MB): peak = 1505.504 ; gain = 993.281
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1505.504 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:06:35 . Memory (MB): peak = 1581.418 ; gain = 1070.871
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.425 . Memory (MB): peak = 1581.418 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_0_0_synth_1/design_1_proc_sys_reset_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 1505.504 ; gain = 0.000
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_proc_sys_reset_0_0, cache-ID = bdaa135713cc94e8
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 1581.418 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_proc_sys_reset_0_0, cache-ID = 4d912aadf19a6156
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1505.504 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1581.418 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_proc_sys_reset_0_0_synth_1/design_1_proc_sys_reset_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_proc_sys_reset_0_0_utilization_synth.rpt -pb design_1_proc_sys_reset_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 12 17:35:18 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 20:54:25 2026...

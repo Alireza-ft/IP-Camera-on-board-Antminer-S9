@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4331D318927A904",
+      "boundary_crc": "0xC88133EC504DF676",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../ip_camera.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -17,7 +17,6 @@
       "smartconnect_1": "",
       "xlconcat_0": "",
       "axi_vdma_0": "",
-      "axi_gpio_0": "",
       "axis_data_fifo_0": "",
       "ov7670_axi_stream_ca_0": "",
       "ov7670_controller_0": "",
@@ -196,15 +195,7 @@
       "GPIO_0": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "GPIO_0_tri_o",
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       }
     },
     "ports": {
@@ -222,31 +213,11 @@
         "left": "7",
         "right": "0"
       },
-      "config_finished_0": {
-        "direction": "O"
-      },
       "sioc_0": {
         "direction": "O"
       },
       "siod_0": {
         "direction": "IO"
-      },
-      "reset_0": {
-        "type": "rst",
-        "direction": "O",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
-      },
-      "pwdn_0": {
-        "direction": "O"
       },
       "xclk_0": {
         "direction": "O"
@@ -424,12 +395,6 @@
           },
           "PCW_I2C0_PERIPHERAL_ENABLE": {
             "value": "0"
-          },
-          "PCW_I2C0_RESET_ENABLE": {
-            "value": "0"
-          },
-          "PCW_I2C_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
           },
           "PCW_I2C_RESET_ENABLE": {
             "value": "1"
@@ -1351,24 +1316,6 @@
           }
         }
       },
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "ip_revision": "33",
-        "xci_name": "design_1_axi_gpio_0_0",
-        "xci_path": "ip\\design_1_axi_gpio_0_0\\design_1_axi_gpio_0_0.xci",
-        "inst_hier_path": "axi_gpio_0",
-        "parameters": {
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_DOUT_DEFAULT": {
-            "value": "0x00000003"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "2"
-          }
-        }
-      },
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
         "ip_revision": "13",
@@ -1526,7 +1473,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "24000000",
+                "value": "2.4e+07",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -1583,12 +1530,6 @@
       }
     },
     "interface_nets": {
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "GPIO_0",
-          "axi_gpio_0/GPIO"
-        ]
-      },
       "axi_vdma_0_M_AXI_S2MM": {
         "interface_ports": [
           "axi_vdma_0/M_AXI_S2MM",
@@ -1631,12 +1572,6 @@
           "axi_vdma_0/S_AXI_LITE"
         ]
       },
-      "smartconnect_0_M01_AXI": {
-        "interface_ports": [
-          "smartconnect_0/M01_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
       "smartconnect_1_M00_AXI": {
         "interface_ports": [
           "smartconnect_1/M00_AXI",
@@ -1676,24 +1611,6 @@
           "axis_data_fifo_0/s_axis_aclk"
         ]
       },
-      "ov7670_controller_0_config_finished": {
-        "ports": [
-          "ov7670_controller_0/config_finished",
-          "config_finished_0"
-        ]
-      },
-      "ov7670_controller_0_pwdn": {
-        "ports": [
-          "ov7670_controller_0/pwdn",
-          "pwdn_0"
-        ]
-      },
-      "ov7670_controller_0_reset": {
-        "ports": [
-          "ov7670_controller_0/reset",
-          "reset_0"
-        ]
-      },
       "ov7670_controller_0_sioc": {
         "ports": [
           "ov7670_controller_0/sioc",
@@ -1717,8 +1634,7 @@
           "proc_sys_reset_0/peripheral_aresetn",
           "smartconnect_0/aresetn",
           "smartconnect_1/aresetn",
-          "axi_vdma_0/axi_resetn",
-          "axi_gpio_0/s_axi_aresetn"
+          "axi_vdma_0/axi_resetn"
         ]
       },
       "proc_sys_reset_cam_peripheral_aresetn": {
@@ -1735,7 +1651,6 @@
           "smartconnect_1/aclk",
           "axi_vdma_0/s_axi_lite_aclk",
           "axi_vdma_0/m_axi_s2mm_aclk",
-          "axi_gpio_0/s_axi_aclk",
           "axi_vdma_0/s_axis_s2mm_aclk",
           "axis_data_fifo_0/m_axis_aclk",
           "processing_system7_0/S_AXI_HP0_ACLK",
@@ -1779,11 +1694,6 @@
         "address_spaces": {
           "Data": {
             "segments": {
-              "SEG_axi_gpio_0_Reg": {
-                "address_block": "/axi_gpio_0/S_AXI/Reg",
-                "offset": "0x41200000",
-                "range": "64K"
-              },
               "SEG_axi_vdma_0_Reg": {
                 "address_block": "/axi_vdma_0/S_AXI_LITE/Reg",
                 "offset": "0x43000000",
