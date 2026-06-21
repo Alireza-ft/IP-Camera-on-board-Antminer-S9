@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sat Jun 20 21:31:42 2026
+| Date         : Sun Jun 21 20:08:25 2026
 | Host         : DESKTOP-GTOUM49 running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 | Design       : design_1_wrapper
@@ -24,32 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
-+---------+----------+---------------------------------+------------+
-| Rule    | Severity | Description                     | Violations |
-+---------+----------+---------------------------------+------------+
-| PLCK-12 | Error    | Clock Placer Checks             | 1          |
-| RPBF-3  | Warning  | IO port buffering is incomplete | 1          |
-+---------+----------+---------------------------------+------------+
+             Violations found: 1
++--------+----------+---------------------------------+------------+
+| Rule   | Severity | Description                     | Violations |
++--------+----------+---------------------------------+------------+
+| RPBF-3 | Warning  | IO port buffering is incomplete | 1          |
++--------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-PLCK-12#1 Error
-Clock Placer Checks  
-Poor placement for routing between an IO pin and BUFG. 
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
- If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .xdc file to demote this message to a WARNING. However, the use of this override is highly discouraged. These examples can be used directly in the .xdc file to override this clock rule.
-	< set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk_0_IBUF] >
-
-	Clock Rule: rule_gclkio_bufg
-	Status: FAILED
-	Rule Description: An IOB driving a BUFG must use a CCIO in the same half side (top/bottom) of chip as the BUFG
-
-	pclk_0_IBUF_inst (IBUF.O) is locked to Y18
-	pclk_0_IBUF_BUFG_inst (BUFG.I) cannot be placed
-
-Related violations: <none>
-
 RPBF-3#1 Warning
 IO port buffering is incomplete  
 Device port siod_0 expects both input and output buffering but the buffers are incomplete.

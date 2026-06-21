@@ -343,7 +343,7 @@
           },
           "CLK_DOMAIN": {
             "value": "design_1_processing_system7_0_0_FCLK_CLK0",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "DATA_WIDTH": {
             "value": "32",
@@ -359,23 +359,23 @@
           },
           "HAS_BURST": {
             "value": "0",
-            "value_src": "ip"
+            "value_src": "default"
           },
           "HAS_CACHE": {
             "value": "0",
-            "value_src": "ip"
+            "value_src": "default"
           },
           "HAS_LOCK": {
             "value": "0",
-            "value_src": "ip"
+            "value_src": "default"
           },
           "HAS_PROT": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "HAS_QOS": {
             "value": "0",
-            "value_src": "ip"
+            "value_src": "default"
           },
           "HAS_REGION": {
             "value": "0",
@@ -418,7 +418,7 @@
           },
           "PROTOCOL": {
             "value": "AXI4LITE",
-            "value_src": "ip"
+            "value_src": "default"
           },
           "READ_WRITE_MODE": {
             "value": "READ_WRITE",

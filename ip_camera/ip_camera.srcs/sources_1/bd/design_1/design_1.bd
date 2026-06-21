@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC88133EC504DF676",
+      "boundary_crc": "0xC88133EC8989C880",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../ip_camera.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -191,11 +191,6 @@
             "direction": "IO"
           }
         }
-      },
-      "GPIO_0": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       }
     },
     "ports": {

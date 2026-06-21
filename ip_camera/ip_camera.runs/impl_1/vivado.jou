@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sat Jun 20 21:28:00 2026
-# Process ID: 3520
+# Start of session at: Sun Jun 21 20:04:41 2026
+# Process ID: 1388
 # Current directory: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/impl_1/design_1_wrapper.vdi
@@ -17,8 +17,8 @@
 # CPU Physical cores:2
 # CPU Logical cores :4
 # Host memory       :3688 MB
-# Swap memory       :6677 MB
-# Total Virtual     :10365 MB
-# Available Virtual :5106 MB
+# Swap memory       :6620 MB
+# Total Virtual     :10309 MB
+# Available Virtual :5264 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
