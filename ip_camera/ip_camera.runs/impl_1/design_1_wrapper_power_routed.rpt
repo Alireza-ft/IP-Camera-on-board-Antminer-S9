@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sun Jun 21 20:11:02 2026
+| Date             : Mon Jun 22 02:02:56 2026
 | Host             : DESKTOP-GTOUM49 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -54,14 +54,14 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.013 |        4 |       --- |             --- |
 | Slice Logic              |     0.005 |     7517 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2401 |     17600 |           13.64 |
+|   LUT as Logic           |     0.004 |     2400 |     17600 |           13.64 |
 |   CARRY4                 |    <0.001 |      120 |      4400 |            2.73 |
 |   Register               |    <0.001 |     3437 |     35200 |            9.76 |
 |   LUT as Distributed RAM |    <0.001 |      116 |      6000 |            1.93 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register  |    <0.001 |      112 |      6000 |            1.87 |
 |   Others                 |     0.000 |      571 |       --- |             --- |
-| Signals                  |     0.005 |     5177 |       --- |             --- |
+| Signals                  |     0.005 |     5179 |       --- |             --- |
 | Block RAM                |     0.004 |      5.5 |        60 |            9.17 |
 | I/O                      |     0.001 |       14 |       100 |           14.00 |
 | PS7                      |     1.534 |        1 |       --- |             --- |
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.034 |       0.026 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.033 |       0.026 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -155,8 +155,8 @@ Table of Contents
 +----------------------------+-----------+
 | design_1_wrapper           |     1.562 |
 |   design_1_i               |     1.561 |
-|     axi_vdma_0             |     0.014 |
-|       U0                   |     0.014 |
+|     axi_vdma_0             |     0.013 |
+|       U0                   |     0.013 |
 |     axis_data_fifo_0       |     0.001 |
 |       inst                 |     0.001 |
 |     ov7670_axi_stream_ca_0 |     0.001 |
