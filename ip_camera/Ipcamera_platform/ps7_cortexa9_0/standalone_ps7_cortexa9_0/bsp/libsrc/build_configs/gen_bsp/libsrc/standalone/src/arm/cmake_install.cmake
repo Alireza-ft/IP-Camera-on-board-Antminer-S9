@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Arf/Desktop/ip_camera/zynq/IP-Camera-on-board-Antminer-S9/ip_camera/Ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/standalone/src/arm
+# Install script for directory: C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/standalone/src/arm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Arf/Desktop/ip_camera/zynq/IP-Camera-on-board-Antminer-S9/ip_camera/Ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/common/cmake_install.cmake")
+  include("C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Arf/Desktop/ip_camera/zynq/IP-Camera-on-board-Antminer-S9/ip_camera/Ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cortexa9/cmake_install.cmake")
+  include("C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cortexa9/cmake_install.cmake")
 endif()
 

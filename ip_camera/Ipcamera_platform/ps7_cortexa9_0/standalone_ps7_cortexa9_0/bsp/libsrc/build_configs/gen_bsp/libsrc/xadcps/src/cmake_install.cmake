@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Arf/Desktop/ip_camera/zynq/IP-Camera-on-board-Antminer-S9/ip_camera/Ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/xadcps/src
+# Install script for directory: C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/xadcps/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

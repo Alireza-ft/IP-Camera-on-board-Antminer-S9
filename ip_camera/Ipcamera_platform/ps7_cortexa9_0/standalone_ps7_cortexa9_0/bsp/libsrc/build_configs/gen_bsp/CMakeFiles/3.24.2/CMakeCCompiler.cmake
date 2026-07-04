@@ -67,7 +67,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/Arf/Desktop/ip_camera/zynq/IP-Camera-on-board-Antminer-S9/ip_camera/Ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/12.2.0/include;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/12.2.0/include-fixed;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/12.2.0/include;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/12.2.0/include-fixed;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;c")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/lib/thumb/v7-a+fp/hard;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/12.2.0;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/lib/arm-xilinx-eabi/12.2.0;E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

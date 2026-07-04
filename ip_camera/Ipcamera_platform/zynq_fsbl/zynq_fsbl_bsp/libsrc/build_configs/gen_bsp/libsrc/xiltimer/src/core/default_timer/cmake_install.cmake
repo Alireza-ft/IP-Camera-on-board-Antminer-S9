@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Arf/Desktop/ip_camera/zynq/IP-Camera-on-board-Antminer-S9/ip_camera/Ipcamera_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/xiltimer/src/core/default_timer
+# Install script for directory: C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/xiltimer/src/core/default_timer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

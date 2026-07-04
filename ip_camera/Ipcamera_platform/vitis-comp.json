@@ -1,10 +1,10 @@
 {
-  "name": "Ipcamera_platform",
+  "name": "ipcamera_platform",
   "type": "PLATFORM",
   "configuration": {
     "description": "",
     "xsa": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\design_1_wrapper.xsa",
-    "xsaPathInPlatform": "Ipcamera_platform\\hw\\design_1_wrapper.xsa",
+    "xsaPathInPlatform": "ipcamera_platform\\hw\\design_1_wrapper.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",
     "isCustomFSBL": false,
@@ -27,8 +27,8 @@
         "os": "standalone",
         "appTemplate": "zynq_fsbl",
         "isBootDomain": true,
-        "qemuData": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\Ipcamera_platform\\resources\\zynq_fsbl\\qemu",
-        "qemuArgsFile": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\Ipcamera_platform\\resources\\zynq_fsbl\\qemu\\qemu_args.txt",
+        "qemuData": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\ipcamera_platform\\resources\\zynq_fsbl\\qemu",
+        "qemuArgsFile": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\ipcamera_platform\\resources\\zynq_fsbl\\qemu\\qemu_args.txt",
         "pmcQemuArgsFile": "",
         "isBSPGenReq": false
       },
@@ -41,8 +41,8 @@
         "os": "standalone",
         "appTemplate": "empty_application",
         "isBootDomain": false,
-        "qemuData": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\Ipcamera_platform\\resources\\standalone_ps7_cortexa9_0\\qemu",
-        "qemuArgsFile": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\Ipcamera_platform\\resources\\standalone_ps7_cortexa9_0\\qemu\\qemu_args.txt",
+        "qemuData": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\ipcamera_platform\\resources\\standalone_ps7_cortexa9_0\\qemu",
+        "qemuArgsFile": "C:\\Users\\Arf\\Desktop\\ip_camera\\zynq\\IP-Camera-on-board-Antminer-S9\\ip_camera\\ipcamera_platform\\resources\\standalone_ps7_cortexa9_0\\qemu\\qemu_args.txt",
         "pmcQemuArgsFile": "",
         "isBSPGenReq": false
       }
