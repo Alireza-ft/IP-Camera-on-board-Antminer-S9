@@ -35,7 +35,7 @@ int udp_socket_init(void)
 
     if(err != ERR_OK)
     {
-        xil_printf("UDP Connect Failed\r\n");
+        xil_printf("UDP Connect Failed ,Error code is (%d)\r\n",err);
         return -1;
     }
 
@@ -72,6 +72,7 @@ int udp_send_test(void)
     if(err != ERR_OK)
     {
         xil_printf("UDP Send Failed\r\n");
+        return -1;
     }
 
     pbuf_free(packet);

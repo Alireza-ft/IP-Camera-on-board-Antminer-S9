@@ -7,6 +7,7 @@
 #include "lwip/netif.h"
 #include "lwip/ip_addr.h"
 #include "netif/xadapter.h"
+#include "lwip/timeouts.h"
 
 struct netif server_netif;
 
@@ -59,4 +60,5 @@ int network_init(void)
 void network_poll(void)
 {
     xemacif_input(&server_netif);
+    //sys_check_timeouts();
 }
