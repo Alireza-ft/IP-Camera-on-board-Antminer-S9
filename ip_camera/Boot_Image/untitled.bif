@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_platform\export\ipcamera_platform\sw\boot\fsbl.elf
+	C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_udp\_ide\bitstream\design_1_wrapper.bit
+	C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_udp\build\ipcamera_udp.elf
+}
