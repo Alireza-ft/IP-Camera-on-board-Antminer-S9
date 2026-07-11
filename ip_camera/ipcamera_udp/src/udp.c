@@ -27,6 +27,12 @@ int udp_socket_init(void)
 
     IP4_ADDR(&dest_ip,192,168,1,70);
 
+    xil_printf("Destination IP : %d.%d.%d.%d\r\n",
+    ip4_addr1(ip_2_ip4(&dest_ip)),
+    ip4_addr2(ip_2_ip4(&dest_ip)),
+    ip4_addr3(ip_2_ip4(&dest_ip)),
+    ip4_addr4(ip_2_ip4(&dest_ip)));
+
     err_t err;
 
     err = udp_connect(pcb,
@@ -68,6 +74,7 @@ int udp_send_test(void)
     err_t err;
 
     err = udp_send(pcb, packet);
+    xil_printf("udp_send() returned = %d\r\n", err);
 
     if(err != ERR_OK)
     {

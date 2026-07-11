@@ -35,6 +35,11 @@ int network_init(void)
     IP4_ADDR(&netmask,255,255,255,0);
     IP4_ADDR(&gateway,192,168,1,1);
 
+    xil_printf("Before lwip_init\r\n");
+    lwip_init();
+
+    xil_printf("Before xemac_add\r\n");    
+    
     if (!xemac_add(&server_netif,
                 &ipaddr,
                 &netmask,
@@ -45,16 +50,41 @@ int network_init(void)
         xil_printf("Error: Failed to add Ethernet interface!\r\n");
         return -1;
     }
+    
+    xil_printf("After xemac_add\r\n");
 
     netif_set_default(&server_netif);
 
     netif_set_up(&server_netif);
 
+    if (netif_is_link_up(&server_netif))
+    {
+        xil_printf("Ethernet Link UP\r\n");
+    }
+
+    
+    else
+    {
+        xil_printf("Ethernet Link DOWN\r\n");
+    }    
+
     xil_printf("Ethernet Interface Up\r\n");    
 
-        xil_printf("lwIP OK\r\n");
+    xil_printf("lwIP OK\r\n");
 
-        return 0;
+    
+    xil_printf("IP Address : %d.%d.%d.%d\r\n",
+        ip4_addr1(&ipaddr),
+        ip4_addr2(&ipaddr),
+        ip4_addr3(&ipaddr),
+        ip4_addr4(&ipaddr));
+
+    xil_printf("Gateway    : %d.%d.%d.%d\r\n",
+        ip4_addr1(&gateway),
+        ip4_addr2(&gateway),
+        ip4_addr3(&gateway),
+        ip4_addr4(&gateway));
+    return 0;
 }
 
 void network_poll(void)
