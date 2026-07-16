@@ -11,7 +11,7 @@ int vdma_init(void)
     XAxiVdma_Config *Config;
     int Status;
 
-    Config = XAxiVdma_LookupConfig(XPAR_AXIVDMA_0_DEVICE_ID);
+    Config = XAxiVdma_LookupConfig(XPAR_XAXIVDMA_0_BASEADDR);
 
     if (Config == NULL)
     {
