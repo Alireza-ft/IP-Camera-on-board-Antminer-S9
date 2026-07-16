@@ -12,5 +12,6 @@
 
 int vdma_init(void);
 int vdma_start(void);
+void vdma_dump_framebuffer(void);
 
 #endif

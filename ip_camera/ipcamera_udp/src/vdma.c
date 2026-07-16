@@ -67,6 +67,18 @@ int vdma_start(void)
     return XST_SUCCESS;
 }
 
+void vdma_dump_framebuffer(void)
+{
+    volatile unsigned int *ptr = (volatile unsigned int *)FRAME_BUFFER_ADDR;
+
+    xil_printf("Frame Buffer:\r\n");
+
+    for(int i = 0; i < 16; i++)
+    {
+        xil_printf("%08X\r\n", ptr[i]);
+    }
+}
+
 int vdma_init(void)
 {
     XAxiVdma_Config *Config;
