@@ -12,7 +12,9 @@ int main(void)
 
     if(vdma_init() != 0)
         return -1;
-
+            
+    if(vdma_start() != 0)
+        return -1;
     if(udp_socket_init() != 0)
         return -1;
 
