@@ -24,6 +24,8 @@ for(volatile int i = 0; i < 50000000; i++);
         return -1;
 
     udp_send_test();
+    
+    udp_send_frame();
 
     while(1)
     {
