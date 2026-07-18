@@ -29,7 +29,12 @@ int udp_send_frame(void)
                    offset,
                    packet_size);
 
-        
+        if(udp_send_packet(frame + offset, packet_size) != 0)
+        {
+            xil_printf("Packet Send Failed\r\n");
+            return -1;
+        }
+
 
         offset += packet_size;
     }

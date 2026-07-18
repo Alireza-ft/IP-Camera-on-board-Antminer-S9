@@ -88,3 +88,29 @@ int udp_send_test(void)
 
     return 0;
 }
+
+int udp_send_packet(void *data, u16_t length)
+{
+    struct pbuf *packet;
+
+    packet = pbuf_alloc(PBUF_TRANSPORT,
+                        length,
+                        PBUF_RAM);
+
+    if(packet == NULL)
+        return -1;
+
+    memcpy(packet->payload,
+           data,
+           length);
+
+    if(udp_send(pcb, packet) != ERR_OK)
+    {
+        pbuf_free(packet);
+        return -1;
+    }
+
+    pbuf_free(packet);
+
+    return 0;
+}
