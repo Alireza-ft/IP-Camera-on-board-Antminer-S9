@@ -68,7 +68,8 @@ int network_init(void)
         xil_printf("Ethernet Link DOWN\r\n");
     }    
 
-    xil_printf("Ethernet Interface Up\r\n");    
+    xil_printf("Ethernet Interface Up\r\n");
+    xil_printf("Netif flags = %02X\r\n", server_netif.flags);        
 
     xil_printf("lwIP OK\r\n");
 
@@ -84,11 +85,23 @@ int network_init(void)
         ip4_addr2(&gateway),
         ip4_addr3(&gateway),
         ip4_addr4(&gateway));
+
+    
     return 0;
 }
 
 void network_poll(void)
 {
+    static int cnt = 0;
+
+    cnt++;
+
+    if(cnt % 100000 == 0)
+    {
+        xil_printf("poll\r\n");
+        xil_printf("Netif flags = %02X\r\n", server_netif.flags);
+    }
+
     xemacif_input(&server_netif);
     //sys_check_timeouts();
 }
