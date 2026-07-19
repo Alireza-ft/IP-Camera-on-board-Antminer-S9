@@ -45,7 +45,8 @@ int udp_socket_init(void)
         return -1;
     }
 
-    xil_printf("UDP Connected\r\n");    
+    xil_printf("UDP Connected\r\n");
+    xil_printf("pcb local port = %d\r\n", pcb->local_port);    
     
 
     return 0;
@@ -75,6 +76,11 @@ int udp_send_test(void)
 
     err = udp_send(pcb, packet);
     xil_printf("udp_send() returned = %d\r\n", err);
+
+    err = udp_send(pcb, packet);
+    xil_printf("udp_send() = %d\r\n", err);
+
+    
 
     if(err != ERR_OK)
     {

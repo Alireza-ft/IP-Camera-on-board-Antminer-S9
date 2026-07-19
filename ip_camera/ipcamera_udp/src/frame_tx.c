@@ -25,7 +25,7 @@ int udp_send_frame(void)
         if((frame_size - offset) < UDP_PAYLOAD_SIZE)
             packet_size = frame_size - offset;
 
-        xil_printf("Packet Offset=%lu Size=%lu\r\n",
+        xil_printf("Packet Offset=%u Size=%u\r\n",
                    offset,
                    packet_size);
 

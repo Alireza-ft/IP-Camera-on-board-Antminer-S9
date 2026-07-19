@@ -4,6 +4,8 @@
 #include "vdma.h"
 #include "frame_tx.h"
 
+#include <string.h>
+
 int main(void)
 {
     xil_printf("Project Start\r\n");
@@ -13,6 +15,7 @@ int main(void)
 
     if(vdma_init() != 0)
         return -1;
+    memset((void *)FRAME_BUFFER_ADDR, 0x00, FRAME_WIDTH * FRAME_HEIGHT * BYTES_PER_PIXEL);
         
     if(vdma_start() != 0)
     return -1;
@@ -24,6 +27,10 @@ int main(void)
     
     if(udp_socket_init() != 0)
         return -1;
+    for(int i = 0; i < 1000; i++)
+    {
+        network_poll();
+    }
 
     udp_send_test();
     
