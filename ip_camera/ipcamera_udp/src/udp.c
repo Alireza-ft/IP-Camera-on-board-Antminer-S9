@@ -1,4 +1,6 @@
 #include "udp.h"
+#include "xemacps.h"
+#include "xparameters.h"
 
 #include "xil_printf.h"
 
@@ -77,6 +79,20 @@ int udp_send_test(void)
     err = udp_send(pcb, packet);
     xil_printf("udp_send() returned = %d\r\n", err);
 
+        
+    XEmacPs Emac;
+    XEmacPs_Config *Cfg;
+
+    Cfg = XEmacPs_LookupConfig(XPAR_XEMACPS_0_BASEADDR);
+
+    XEmacPs_CfgInitialize(&Emac,
+                        Cfg,
+                        Cfg->BaseAddress);
+
+    xil_printf("TXSR = %08X\r\n",
+            XEmacPs_ReadReg(Emac.Config.BaseAddress,
+                            XEMACPS_TXSR_OFFSET));        
+        
     err = udp_send(pcb, packet);
     xil_printf("udp_send() = %d\r\n", err);
 
