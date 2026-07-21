@@ -34,7 +34,7 @@ int main(void)
 
     udp_send_test();
     
-    udp_send_frame();
+    //udp_send_frame();
 
     while(1)
     {

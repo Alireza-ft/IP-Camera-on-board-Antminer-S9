@@ -2,6 +2,7 @@
 
 #include "vdma.h"
 #include "xil_printf.h"
+#include "xil_cache.h"
 
 #include <stdint.h>
 
@@ -17,7 +18,10 @@ int udp_send_frame(void)
     uint32_t offset = 0;
 
     xil_printf("Sending Frame...\r\n");
+    
 
+
+        
     while(offset < frame_size)
     {
         uint32_t packet_size = UDP_PAYLOAD_SIZE;
@@ -39,6 +43,8 @@ int udp_send_frame(void)
         offset += packet_size;
     }
 
+    Xil_DCacheFlushRange(FRAME_BUFFER_ADDR, frame_size);
+        
     xil_printf("Frame Finished\r\n");
 
     return 0;

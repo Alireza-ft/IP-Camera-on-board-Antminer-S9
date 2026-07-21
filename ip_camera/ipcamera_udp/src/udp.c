@@ -76,27 +76,22 @@ int udp_send_test(void)
 
     err_t err;
 
+
     err = udp_send(pcb, packet);
+
     xil_printf("udp_send() returned = %d\r\n", err);
 
-        
-    XEmacPs Emac;
-    XEmacPs_Config *Cfg;
+    xil_printf("TXSR=%08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR,
+                        XEMACPS_TXSR_OFFSET));
 
-    Cfg = XEmacPs_LookupConfig(XPAR_XEMACPS_0_BASEADDR);
+    xil_printf("NWCTRL=%08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR,
+                        XEMACPS_NWCTRL_OFFSET));
 
-    XEmacPs_CfgInitialize(&Emac,
-                        Cfg,
-                        Cfg->BaseAddress);
-
-    xil_printf("TXSR = %08X\r\n",
-            XEmacPs_ReadReg(Emac.Config.BaseAddress,
-                            XEMACPS_TXSR_OFFSET));        
-        
-    err = udp_send(pcb, packet);
-    xil_printf("udp_send() = %d\r\n", err);
-
-    
+    xil_printf("NWSR=%08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR,
+                        XEMACPS_NWSR_OFFSET));
 
     if(err != ERR_OK)
     {

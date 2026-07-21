@@ -35,8 +35,7 @@ int network_init(void)
     IP4_ADDR(&netmask,255,255,255,0);
     IP4_ADDR(&gateway,192,168,1,1);
 
-    xil_printf("Before lwip_init\r\n");
-    lwip_init();
+  
 
     xil_printf("Before xemac_add\r\n");    
     
