@@ -49,6 +49,16 @@ int network_init(void)
         xil_printf("Error: Failed to add Ethernet interface!\r\n");
         return -1;
     }
+
+    xil_printf("MAC = %02X:%02X:%02X:%02X:%02X:%02X\r\n",
+        server_netif.hwaddr[0],
+        server_netif.hwaddr[1],
+        server_netif.hwaddr[2],
+        server_netif.hwaddr[3],
+        server_netif.hwaddr[4],
+        server_netif.hwaddr[5]);
+
+    xil_printf("HWADDR_LEN = %d\r\n", server_netif.hwaddr_len);
     
     xil_printf("After xemac_add\r\n");
 
