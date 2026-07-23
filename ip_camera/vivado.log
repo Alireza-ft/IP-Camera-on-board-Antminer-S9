@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Jun 22 17:40:52 2026
-# Process ID: 3512
-# Current directory: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent572 C:\Users\Arf\Desktop\ip_camera\New folder\IP-Camera-on-board-Antminer-S9\ip_camera\ip_camera.xpr
-# Log file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/vivado.log
-# Journal file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera\vivado.jou
+# Start of session at: Thu Jul 23 21:59:29 2026
+# Process ID: 1496
+# Current directory: C:/Users/Arf/Desktop/IP-Camera/ip_camera
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4776 C:\Users\Arf\Desktop\IP-Camera\ip_camera\ip_camera.xpr
+# Log file: C:/Users/Arf/Desktop/IP-Camera/ip_camera/vivado.log
+# Journal file: C:/Users/Arf/Desktop/IP-Camera/ip_camera\vivado.jou
 # Running On        :DESKTOP-GTOUM49
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :19045
@@ -17,14 +17,12 @@
 # CPU Physical cores:2
 # CPU Logical cores :4
 # Host memory       :3688 MB
-# Swap memory       :6620 MB
-# Total Virtual     :10309 MB
-# Available Virtual :7747 MB
+# Swap memory       :3801 MB
+# Total Virtual     :7490 MB
+# Available Virtual :4035 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.xpr}
-INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera'
+open_project C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at E:/xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at E:/xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at E:/xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
@@ -89,35 +87,29 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at E:/xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at E:/xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at E:/xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.ip_user_files'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.ip_user_files'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:02:27 ; elapsed = 00:02:09 . Memory (MB): peak = 1564.305 ; gain = 523.699
+open_project: Time (s): cpu = 00:01:07 ; elapsed = 00:01:54 . Memory (MB): peak = 1565.340 ; gain = 542.160
 update_compile_order -fileset sources_1
-WARNING: [Vivado 12-818] No files matched 'C:/Users/Arf/Desktop/ip_camera/New'
-WARNING: [Vivado 12-818] No files matched 'folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd'
-ERROR: [Common 17-55] 'get_property' expects at least one object.
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-818] No files matched 'C:/Users/Arf/Desktop/ip_camera/New'
-WARNING: [Vivado 12-818] No files matched 'folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd'
-ERROR: [Common 17-55] 'get_property' expects at least one object.
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-818] No files matched 'C:/Users/Arf/Desktop/ip_camera/New'
-WARNING: [Vivado 12-818] No files matched 'folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd'
-ERROR: [Common 17-55] 'get_property' expects at least one object.
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-818] No files matched 'C:/Users/Arf/Desktop/ip_camera/New'
-WARNING: [Vivado 12-818] No files matched 'folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd'
-ERROR: [Common 17-55] 'get_property' expects at least one object.
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-write_hw_platform -fixed -include_bit -force -file {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/design_1_wrapper.xsa}
-INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/design_1_wrapper.xsa ...
-INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
-INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/design_1_wrapper.xsa
-INFO: [Hsi 55-2053] elapsed time for repository (E:/xilinx/Vivado/2024.1/data/embeddedsw) loading 10 seconds
-write_hw_platform: Time (s): cpu = 00:00:08 ; elapsed = 00:00:34 . Memory (MB): peak = 1752.871 ; gain = 188.566
+open_bd_design {C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smartconnect_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smartconnect_1
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:module_ref:ov7670_axi_stream_capture:1.0 - ov7670_axi_stream_ca_0
+Adding component instance block -- xilinx.com:module_ref:ov7670_controller:1.0 - ov7670_controller_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_cam
+Successfully read diagram <design_1> from block design file <C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 1611.945 ; gain = 24.125
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 22 18:05:48 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 22:51:54 2026...
