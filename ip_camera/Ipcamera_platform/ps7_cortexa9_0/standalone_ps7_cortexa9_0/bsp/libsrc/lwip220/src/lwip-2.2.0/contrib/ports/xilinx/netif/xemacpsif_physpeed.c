@@ -850,7 +850,7 @@ static u32_t get_IEEE_phy_speed(XEmacPs *xemacpsp, u32_t phy_addr)
 	} else {
 		//RetStatus = get_Marvell_phy_speed(xemacpsp, phy_addr);
         xil_printf("Unknown PHY (ID=%04X), forcing 100 Mbps\r\n", phy_identity);
-        RetStatus = 100;
+        RetStatus = 1000;
 	}
 
 	return RetStatus;
