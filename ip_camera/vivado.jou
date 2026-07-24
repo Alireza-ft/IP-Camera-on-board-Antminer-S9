@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Jul 23 21:59:29 2026
-# Process ID: 1496
+# Start of session at: Thu Jul 23 23:15:06 2026
+# Process ID: 8952
 # Current directory: C:/Users/Arf/Desktop/IP-Camera/ip_camera
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4776 C:\Users\Arf\Desktop\IP-Camera\ip_camera\ip_camera.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7956 C:\Users\Arf\Desktop\IP-Camera\ip_camera\ip_camera.xpr
 # Log file: C:/Users/Arf/Desktop/IP-Camera/ip_camera/vivado.log
 # Journal file: C:/Users/Arf/Desktop/IP-Camera/ip_camera\vivado.jou
 # Running On        :DESKTOP-GTOUM49
@@ -19,9 +19,34 @@
 # Host memory       :3688 MB
 # Swap memory       :3801 MB
 # Total Virtual     :7490 MB
-# Available Virtual :4035 MB
+# Available Virtual :3915 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.xpr
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property CONFIG.PCW_ENET0_ENET0_IO {MIO 16 .. 27} [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+set_property CONFIG.PCW_PRESET_BANK1_VOLTAGE {LVCMOS 2.5V} [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+endgroup
+validate_bd_design
+startgroup
+endgroup
+make_wrapper -files [get_files C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run design_1_processing_system7_0_0_synth_1
+reset_run design_1_proc_sys_reset_0_0_synth_1
+reset_run design_1_axi_vdma_0_0_synth_1
+reset_run design_1_axis_data_fifo_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/Arf/Desktop/IP-Camera/ip_camera/design_1_wrapper.xsa
