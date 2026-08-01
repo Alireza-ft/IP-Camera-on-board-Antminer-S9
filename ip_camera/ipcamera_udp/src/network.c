@@ -116,7 +116,22 @@ void network_debug_dump(void)
 
     XEmacPs_PhyRead(&eth_instance, 1, 10, &phy_reg);
     xil_printf("[DEBUG] PHY Reg10 (1000T Status)= %04X | LP1000FullDuplex=%d\r\n",
-               phy_reg, (phy_reg >> 11) & 1);
+               phy_reg, (phy_reg >> 11) & 1);               
 
+    
+    xil_printf("[DEBUG] TX Octets Low  = %08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, 0x100));
+    xil_printf("[DEBUG] TX Frames OK   = %08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, 0x118));
+    xil_printf("[DEBUG] TX Errors      = %08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, 0x170));
+
+   
+    xil_printf("[DEBUG] RX Frames OK   = %08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_RXCNT_OFFSET));
+    xil_printf("[DEBUG] RX FCS Errors  = %08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_RXRESERRCNT_OFFSET));
+    xil_printf("[DEBUG] RX Resource Err= %08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_RXRESERRCNT_OFFSET));
     xil_printf("[DEBUG] ==================================\r\n\r\n");
 }

@@ -314,7 +314,7 @@ lib_config:
       name: lwip220_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -350,7 +350,7 @@ lib_config:
       name: lwip220_dhcp
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -360,7 +360,7 @@ lib_config:
       name: lwip220_dhcp_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -428,7 +428,7 @@ lib_config:
       name: lwip220_ip_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -664,7 +664,7 @@ lib_config:
       name: lwip220_netif_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -945,7 +945,7 @@ lib_config:
       name: lwip220_udp_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
