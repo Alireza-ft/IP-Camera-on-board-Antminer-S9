@@ -3,6 +3,7 @@
 #include "xparameters.h"
 #include "xil_printf.h"
 #include "xemacps.h"
+#include "sleep.h"
 
 #include "lwip/init.h"
 #include "lwip/netif.h"
@@ -20,6 +21,46 @@ static unsigned char mac_address[] = { 0x00, 0x0A, 0x35, 0x00, 0x1E, 0x53 };
 static ip4_addr_t ipaddr;
 static ip4_addr_t netmask;
 static ip4_addr_t gateway;
+
+#define PHY_ADDR              1
+#define PHY_REG_CONTROL       0
+#define PHY_REG_STATUS        1
+#define AUTONEG_COMPLETE_BIT  (1 << 5)
+#define LINK_STATUS_BIT       (1 << 2)
+
+static int wait_for_phy_autoneg(u32 timeout_ms)
+{
+    u16_t status_reg = 0;
+    u32 elapsed_ms = 0;
+    const u32 poll_interval_ms = 100;
+
+    xil_printf("[DEBUG] Waiting for real PHY autonegotiation...\r\n");
+
+    while (elapsed_ms < timeout_ms)
+    {
+        XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_STATUS, &status_reg);
+
+        if (status_reg & AUTONEG_COMPLETE_BIT)
+        {
+            xil_printf("[DEBUG] PHY autonegotiation COMPLETE after %u ms | StatusReg=%04X | LinkUp=%d\r\n",
+                       elapsed_ms, status_reg, (status_reg & LINK_STATUS_BIT) ? 1 : 0);
+            return 1;
+        }
+
+        usleep(poll_interval_ms * 1000);
+        elapsed_ms += poll_interval_ms;
+
+        if (elapsed_ms % 1000 == 0)
+        {
+            xil_printf("[DEBUG] ... still waiting (%u ms), StatusReg=%04X\r\n", elapsed_ms, status_reg);
+        }
+    }
+
+    xil_printf("[DEBUG] PHY autonegotiation TIMEOUT after %u ms | Last StatusReg=%04X\r\n",
+               timeout_ms, status_reg);
+    return 0;
+}
+
 
 int network_init(void)
 {
@@ -44,6 +85,12 @@ int network_init(void)
         return -1;
     }
     xil_printf("[DEBUG] xemac_add OK\r\n");
+
+   if (!wait_for_phy_autoneg(5000))
+    {
+        xil_printf("[DEBUG] WARNING: proceeding despite autoneg timeout - link will likely not work\r\n");
+    }
+    
 
     platform_enable_interrupts();
     xil_printf("[DEBUG] platform_enable_interrupts() done\r\n");
