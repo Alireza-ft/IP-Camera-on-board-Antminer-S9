@@ -35,10 +35,12 @@ static int wait_for_phy_autoneg(u32 timeout_ms)
     const u32 poll_interval_ms = 100;
 
     xil_printf("[DEBUG] Waiting for real PHY autonegotiation...\r\n");
+    
 
     while (elapsed_ms < timeout_ms)
     {
         XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_STATUS, &status_reg);
+        
 
         if (status_reg & AUTONEG_COMPLETE_BIT)
         {
@@ -91,7 +93,9 @@ int network_init(void)
         xil_printf("[DEBUG] WARNING: proceeding despite autoneg timeout - link will likely not work\r\n");
     }
     
-
+    XEmacPs_SetOperatingSpeed(&eth_instance, 1000);
+    xil_printf("[DEBUG] Manually overrode MAC operating speed to 1000 Mbps\r\n");
+    
     platform_enable_interrupts();
     xil_printf("[DEBUG] platform_enable_interrupts() done\r\n");
 
