@@ -27,20 +27,38 @@ static ip4_addr_t gateway;
 #define PHY_REG_STATUS        1
 #define AUTONEG_COMPLETE_BIT  (1 << 5)
 #define LINK_STATUS_BIT       (1 << 2)
+#define IEEE_CTRL_AUTONEGOTIATE_ENABLE  0x1000
+#define IEEE_CTRL_AUTONEGOTIATE_RESTART 0x0200
+#define IEEE_CTRL_RESET_MASK            0x8000
 
 static int wait_for_phy_autoneg(u32 timeout_ms)
 {
+    u16_t control_reg = 0;
     u16_t status_reg = 0;
     u32 elapsed_ms = 0;
     const u32 poll_interval_ms = 100;
 
+   
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, &control_reg);
+    control_reg |= IEEE_CTRL_AUTONEGOTIATE_ENABLE;
+    control_reg |= IEEE_CTRL_AUTONEGOTIATE_RESTART;
+    XEmacPs_PhyWrite(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, control_reg);
+
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, &control_reg);
+    control_reg |= IEEE_CTRL_RESET_MASK;
+    XEmacPs_PhyWrite(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, control_reg);
+
+    xil_printf("[DEBUG] PHY reset issued, waiting for reset bit to clear...\r\n");
+    do {
+        XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, &control_reg);
+    } while (control_reg & IEEE_CTRL_RESET_MASK);
+    xil_printf("[DEBUG] PHY reset complete\r\n");
+
     xil_printf("[DEBUG] Waiting for real PHY autonegotiation...\r\n");
-    
 
     while (elapsed_ms < timeout_ms)
     {
         XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_STATUS, &status_reg);
-        
 
         if (status_reg & AUTONEG_COMPLETE_BIT)
         {
@@ -93,8 +111,8 @@ int network_init(void)
         xil_printf("[DEBUG] WARNING: proceeding despite autoneg timeout - link will likely not work\r\n");
     }
     
-    XEmacPs_SetOperatingSpeed(&eth_instance, 1000);
-    xil_printf("[DEBUG] Manually overrode MAC operating speed to 1000 Mbps\r\n");
+    //XEmacPs_SetOperatingSpeed(&eth_instance, 1000);
+    //xil_printf("[DEBUG] Manually overrode MAC operating speed to 1000 Mbps\r\n");
     
     platform_enable_interrupts();
     xil_printf("[DEBUG] platform_enable_interrupts() done\r\n");

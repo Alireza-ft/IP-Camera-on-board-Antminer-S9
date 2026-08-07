@@ -848,8 +848,9 @@ static u32_t get_IEEE_phy_speed(XEmacPs *xemacpsp, u32_t phy_addr)
 	} else if (phy_identity == PHY_ADI_IDENTIFIER) {
 		RetStatus = get_Adi_phy_speed(xemacpsp, phy_addr);
 	} else {
-		//RetStatus = get_Marvell_phy_speed(xemacpsp, phy_addr);
-        xil_printf("Unknown PHY (ID=%04X), forcing 100 Mbps\r\n", phy_identity);
+		RetStatus = get_Marvell_phy_speed(xemacpsp, phy_addr);
+        xil_printf("this is test to see if RetStatus can get value without forcing it value is %d", RetStatus);
+        xil_printf("Unknown PHY (ID=%04X), forcing 1000 Mbps\r\n", phy_identity);
         RetStatus = 1000;
 	}
 
