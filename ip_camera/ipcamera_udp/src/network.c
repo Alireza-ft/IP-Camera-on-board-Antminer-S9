@@ -23,64 +23,39 @@ static ip4_addr_t netmask;
 static ip4_addr_t gateway;
 
 #define PHY_ADDR              1
-#define PHY_REG_CONTROL       0
 #define PHY_REG_STATUS        1
 #define AUTONEG_COMPLETE_BIT  (1 << 5)
 #define LINK_STATUS_BIT       (1 << 2)
-#define IEEE_CTRL_AUTONEGOTIATE_ENABLE  0x1000
-#define IEEE_CTRL_AUTONEGOTIATE_RESTART 0x0200
-#define IEEE_CTRL_RESET_MASK            0x8000
 
-static int wait_for_phy_autoneg(u32 timeout_ms)
+// Polls the PHY's own status register until autonegotiation completes.
+// No manual reset here - a manual reset previously caused an infinite hang.
+static int wait_for_phy_autoneg(u32 timeout_seconds)
 {
-    u16_t control_reg = 0;
     u16_t status_reg = 0;
-    u32 elapsed_ms = 0;
-    const u32 poll_interval_ms = 100;
+    u32 elapsed_seconds = 0;
 
-   
-    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, &control_reg);
-    control_reg |= IEEE_CTRL_AUTONEGOTIATE_ENABLE;
-    control_reg |= IEEE_CTRL_AUTONEGOTIATE_RESTART;
-    XEmacPs_PhyWrite(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, control_reg);
+    xil_printf("[DEBUG] Waiting for PHY autonegotiation (up to %u sec)...\r\n", timeout_seconds);
 
-    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, &control_reg);
-    control_reg |= IEEE_CTRL_RESET_MASK;
-    XEmacPs_PhyWrite(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, control_reg);
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_STATUS, &status_reg);
 
-    xil_printf("[DEBUG] PHY reset issued, waiting for reset bit to clear...\r\n");
-    do {
-        XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_CONTROL, &control_reg);
-    } while (control_reg & IEEE_CTRL_RESET_MASK);
-    xil_printf("[DEBUG] PHY reset complete\r\n");
-
-    xil_printf("[DEBUG] Waiting for real PHY autonegotiation...\r\n");
-
-    while (elapsed_ms < timeout_ms)
+    while (!(status_reg & AUTONEG_COMPLETE_BIT) && elapsed_seconds < timeout_seconds)
     {
+        sleep(1);
+        elapsed_seconds++;
         XEmacPs_PhyRead(&eth_instance, PHY_ADDR, PHY_REG_STATUS, &status_reg);
-
-        if (status_reg & AUTONEG_COMPLETE_BIT)
-        {
-            xil_printf("[DEBUG] PHY autonegotiation COMPLETE after %u ms | StatusReg=%04X | LinkUp=%d\r\n",
-                       elapsed_ms, status_reg, (status_reg & LINK_STATUS_BIT) ? 1 : 0);
-            return 1;
-        }
-
-        usleep(poll_interval_ms * 1000);
-        elapsed_ms += poll_interval_ms;
-
-        if (elapsed_ms % 1000 == 0)
-        {
-            xil_printf("[DEBUG] ... still waiting (%u ms), StatusReg=%04X\r\n", elapsed_ms, status_reg);
-        }
+        xil_printf("[DEBUG] ... still waiting (%u sec), StatusReg=%04X\r\n", elapsed_seconds, status_reg);
     }
 
-    xil_printf("[DEBUG] PHY autonegotiation TIMEOUT after %u ms | Last StatusReg=%04X\r\n",
-               timeout_ms, status_reg);
+    if (status_reg & AUTONEG_COMPLETE_BIT)
+    {
+        xil_printf("[DEBUG] PHY autonegotiation COMPLETE after %u sec | LinkUp=%d\r\n",
+                   elapsed_seconds, (status_reg & LINK_STATUS_BIT) ? 1 : 0);
+        return 1;
+    }
+
+    xil_printf("[DEBUG] PHY autonegotiation TIMEOUT after %u sec\r\n", timeout_seconds);
     return 0;
 }
-
 
 int network_init(void)
 {
@@ -106,14 +81,29 @@ int network_init(void)
     }
     xil_printf("[DEBUG] xemac_add OK\r\n");
 
-   if (!wait_for_phy_autoneg(5000))
+    // IMPORTANT: this must happen BEFORE wait_for_phy_autoneg(), because
+    // that function uses eth_instance for MDIO reads. Previously this was
+    // called at the very end of network_init(), meaning all earlier PHY
+    // reads/writes were operating on an uninitialized (zeroed) XEmacPs
+    // instance - likely the real cause of the earlier infinite hang.
+    XEmacPs_Config *Cfg = XEmacPs_LookupConfig(XPAR_XEMACPS_0_BASEADDR);
+    XEmacPs_CfgInitialize(&eth_instance, Cfg, Cfg->BaseAddress);
+
+    if (!wait_for_phy_autoneg(10))
     {
         xil_printf("[DEBUG] WARNING: proceeding despite autoneg timeout - link will likely not work\r\n");
     }
-    
-    //XEmacPs_SetOperatingSpeed(&eth_instance, 1000);
-    //xil_printf("[DEBUG] Manually overrode MAC operating speed to 1000 Mbps\r\n");
-    
+
+    // NWCTRL previously showed only MDIO enabled (0x10); TX/RX engines
+    // were never turned on. Explicitly enable them here (read-modify-write
+    // so we don't clobber MDEN or other bits already set).
+    u32 nwctrl = XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_NWCTRL_OFFSET);
+    nwctrl |= XEMACPS_NWCTRL_TXEN_MASK;
+    nwctrl |= XEMACPS_NWCTRL_RXEN_MASK;
+    XEmacPs_WriteReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_NWCTRL_OFFSET, nwctrl);
+    xil_printf("[DEBUG] NWCTRL after enabling TX/RX = %08X\r\n",
+        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_NWCTRL_OFFSET));
+
     platform_enable_interrupts();
     xil_printf("[DEBUG] platform_enable_interrupts() done\r\n");
 
@@ -129,9 +119,6 @@ int network_init(void)
 
     xil_printf("IP Address : %d.%d.%d.%d\r\n",
         ip4_addr1(&ipaddr), ip4_addr2(&ipaddr), ip4_addr3(&ipaddr), ip4_addr4(&ipaddr));
-
-    XEmacPs_Config *Cfg = XEmacPs_LookupConfig(XPAR_XEMACPS_0_BASEADDR);
-    XEmacPs_CfgInitialize(&eth_instance, Cfg, Cfg->BaseAddress);
 
     xil_printf("[DEBUG] === network_init end ===\r\n");
 
@@ -161,33 +148,35 @@ void network_debug_dump(void)
 
     u32 nwcfg = XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_NWCFG_OFFSET);
     xil_printf("[DEBUG] NWCFG    = %08X | Speed100/1000=%d FullDuplex=%d\r\n",
-               nwcfg, (nwcfg >> 10) & 1, (nwcfg >> 8) & 1);
+               nwcfg, (nwcfg >> 10) & 1, (nwcfg >> 1) & 1);
+
+    u32 nwctrl = XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_NWCTRL_OFFSET);
+    xil_printf("[DEBUG] NWCTRL   = %08X\r\n", nwctrl);
 
     u32 nwsr = XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_NWSR_OFFSET);
     xil_printf("[DEBUG] NWSR     = %08X\r\n", nwsr);
 
-    XEmacPs_PhyRead(&eth_instance, 1, 0, &phy_reg);
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, 0, &phy_reg);
     xil_printf("[DEBUG] PHY Reg0 (Control)      = %04X | AutoNegEnable=%d Reset=%d\r\n",
                phy_reg, (phy_reg >> 12) & 1, (phy_reg >> 15) & 1);
 
-    XEmacPs_PhyRead(&eth_instance, 1, 1, &phy_reg);
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, 1, &phy_reg);
     xil_printf("[DEBUG] PHY Reg1 (Status)       = %04X | AutoNegComplete=%d LinkUp=%d\r\n",
-               phy_reg, (phy_reg >> 5) & 1, phy_reg & 4 ? 1 : 0);
+               phy_reg, (phy_reg >> 5) & 1, (phy_reg >> 2) & 1);
 
-    XEmacPs_PhyRead(&eth_instance, 1, 4, &phy_reg);
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, 4, &phy_reg);
     xil_printf("[DEBUG] PHY Reg4 (AutoNeg Adv)  = %04X\r\n", phy_reg);
 
-    XEmacPs_PhyRead(&eth_instance, 1, 5, &phy_reg);
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, 5, &phy_reg);
     xil_printf("[DEBUG] PHY Reg5 (LinkPartner)  = %04X\r\n", phy_reg);
 
-    XEmacPs_PhyRead(&eth_instance, 1, 9, &phy_reg);
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, 9, &phy_reg);
     xil_printf("[DEBUG] PHY Reg9 (1000T Ctrl)   = %04X\r\n", phy_reg);
 
-    XEmacPs_PhyRead(&eth_instance, 1, 10, &phy_reg);
+    XEmacPs_PhyRead(&eth_instance, PHY_ADDR, 10, &phy_reg);
     xil_printf("[DEBUG] PHY Reg10 (1000T Status)= %04X | LP1000FullDuplex=%d\r\n",
-               phy_reg, (phy_reg >> 11) & 1);               
+               phy_reg, (phy_reg >> 11) & 1);
 
-    
     xil_printf("[DEBUG] TX Octets Low  = %08X\r\n",
         XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, 0x100));
     xil_printf("[DEBUG] TX Frames OK   = %08X\r\n",
@@ -195,12 +184,12 @@ void network_debug_dump(void)
     xil_printf("[DEBUG] TX Errors      = %08X\r\n",
         XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, 0x170));
 
-   
     xil_printf("[DEBUG] RX Frames OK   = %08X\r\n",
         XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_RXCNT_OFFSET));
-    xil_printf("[DEBUG] RX FCS Errors  = %08X\r\n",
-        XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_RXRESERRCNT_OFFSET));
+    //xil_printf("[DEBUG] RX FCS Errors  = %08X\r\n",
+    //    XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_RXFCSERRCNT_OFFSET));
     xil_printf("[DEBUG] RX Resource Err= %08X\r\n",
         XEmacPs_ReadReg(XPAR_XEMACPS_0_BASEADDR, XEMACPS_RXRESERRCNT_OFFSET));
+
     xil_printf("[DEBUG] ==================================\r\n\r\n");
 }
